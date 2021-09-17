@@ -38,6 +38,7 @@ module.exports = class RestaurantDB {
       db.once("error", (err) => {
         reject(err);
       });
+
       db.once("open", () => {
         this.Restaurant = db.model("restaurants", restaurantSchema);
         resolve();

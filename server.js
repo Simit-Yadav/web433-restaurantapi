@@ -14,9 +14,9 @@ const app = express();
 const cors = require("cors");
 const dotenv = require("dotenv");
 // const restaurants = require("./routes/restaurants");
-const HTTP_PORT = process.env.PORT | 8080;
-const RestaurantDB = require("./modules/restaurantDB.js");
 const { query, validationResult } = require("express-validator");
+const HTTP_PORT = process.env.PORT || 8080;
+const RestaurantDB = require("./modules/restaurantDB.js");
 const db = new RestaurantDB();
 
 dotenv.config({ path: "./config.env" });
